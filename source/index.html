@@ -6,6 +6,10 @@
   <title>Cat energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -34,7 +38,11 @@
     <section class="page-header__hero hero">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <img class="hero__image" src="#" width="280" height="270" alt="Корм Cat energy со вкусом курицы">
+      <picture>
+        <source width="552" height="499" type="image/jpeg" media="(min-width: 1440px)" srcset="images/hero-can-desktop@1x.jpg 1x, images/hero-can-desktop@2x.jpg 2x">
+        <source width="709" height="609" type="image/jpeg" media="(min-width: 768px)" srcset="images/hero-can-tablet@1x.jpg 1x, images/hero-can-tablet@2x.jpg 2x">
+        <img class="hero__image" src="images/hero-can-mobile@1x.jpg" srcset="images/hero-can-mobile@2x.jpg 2x" width="280" height="270" alt="Корм Cat energy со вкусом курицы">
+      </picture>
       <a class="hero__button button" href="#">Подобрать программу</a>
     </section>
   </header>
@@ -81,19 +89,26 @@
         <span class="example__price">15 000 руб.</span>
       </div>
       <div class="example__slider-wrapper">
-        <img class="example__image" src="#" width="280" height="256" alt="Борис до похудения">
-        <img class="example__image" src="#" width="280" height="256" alt="Борис после похудения">
-        <label class="visually-hidden" for="slider-range">Сравнить фотографии до и после</label>
-        <input class="example__slider" type="range" name="slider-range" id="slider-range" min="0" max="100" value="50" step="1">
-        <div class="example__slider-visible"></div>
+        <picture>
+          <source width="560" height="512" type="image/jpeg" media="(min-width: 768px)" srcset="images/before-tablet@1x.jpg 1x, images/before-tablet@2x.jpg 2x">
+          <img class="example__image" src="images/before-mobile@1x.jpg" srcset="images/before-mobile@2x.jpg 2x" width="280" height="256" alt="Борис до похудения">
+        </picture>
+        <picture>
+          <source width="560" height="512" type="image/jpeg" media="(min-width: 768px)" srcset="images/after-tablet@1x.jpg 1x, images/after-tablet@2x.jpg 2x">
+          <img class="example__image" src="images/after-mobile@1x.jpg" srcset="images/after-mobile@2x.jpg 2x" width="280" height="256" alt="Борис после похудения">
+        </picture>
+        <button class="example__slider-button" type="button">
+          <span class="visually-hidden">Сравнить фотографии до и после</span>
+        </button>
+        <div class="example__slider-line"></div>
       </div>
     </section>
     <section class="main__address address">
       <h2 class="visually-hidden">Наш адрес.</h2>
       <p class="address__title">Приглашаем к сотрудничеству дилеров!</p>
       <p class="address__description">ул. Большая <br>Конюшенная, д. 19/8</p>
-      <span class="address__description">Санкт-Петербург</span>
-      <img class="address__image" src="#" width="768" height="400" alt="Наш адрес на карте">
+      <p class="address__description">Санкт-Петербург</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428318933!2d30.320508377103227!3d59.93879686208752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1784557425728!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Наше расположение на карте"></iframe>
     </section>
   </main>
   <footer class="page-footer">
