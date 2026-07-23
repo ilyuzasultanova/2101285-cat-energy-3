@@ -1,0 +1,18 @@
+.products-table__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.products-table__name {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.products-table__feature {
+  line-height: 14px;
+}
