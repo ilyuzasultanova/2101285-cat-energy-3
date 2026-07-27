@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Илюза Султанова](https://up.htmlacademy.ru/adaptive-individual/3/user/2101285).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
