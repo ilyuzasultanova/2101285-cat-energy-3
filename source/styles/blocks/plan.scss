@@ -1,0 +1,73 @@
+.plan__title {
+  color: $black;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.plan__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.plan__item--leaf::before {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  content: "";
+
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#leaf");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 28px;
+}
+
+.plan__item--powder::before {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  content: "";
+
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#powder");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px 29px;
+}
+
+.plan__item--diet::before {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  content: "";
+
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#diet");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 30px;
+}
+
+.plan__item--clock::before {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  content: "";
+
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#clock");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px 31px;
+}

@@ -1,0 +1,72 @@
+.example {
+  background-color: $bg-grey;
+}
+
+.example__title {
+  color: $black;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__item-number {
+  color: $black;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example__price {
+  color: $black;
+  font-family: $secondary-font;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__slider-button {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+  padding: 0;
+  width: 4px;
+  height: 256px;
+  border-radius: 2px;
+  border: none;
+  background-color: $icons-grey;
+  cursor: pointer;
+}
+
+.example__slider-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  content: "";
+
+  border-radius: 50%;
+  border: 2px solid $icons-grey;
+  background-color: $white;
+}
+
+.example__slider-button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 24px;
+  height: 18px;
+
+  content: "";
+
+  mask-image: url("../../icons/stack.svg#slider-arrow");
+  background-color: $icons-grey;
+}
