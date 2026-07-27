@@ -1,0 +1,35 @@
+.product-card__link {
+  text-decoration: none;
+}
+
+.product-card__title {
+  color: $text-dark-grey;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.product-card__features {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card__description {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card--show-more::before {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 50px;
+
+  content: "";
+
+  background-image: url("../../icons/stack.svg#plus");
+  background-repeat: no-repeat;
+  background-position: center center;
+}

@@ -1,0 +1,15 @@
+.address--with-background {
+  background-color: $bg-grey;
+}
+
+.address__title {
+  color: $text-grey;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.address__description {
+  line-height: 20px;
+}

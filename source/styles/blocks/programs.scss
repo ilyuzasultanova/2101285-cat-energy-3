@@ -1,0 +1,63 @@
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.programs__item {
+  background-color: $bg-grey;
+}
+
+.programs__item--slim::before {
+  display: inline-block;
+  width: 36px;
+  height: 50px;
+  margin: 21px 0 0 27px;
+
+  content: "";
+
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-size: cover;
+}
+
+.programs__item--pro::before {
+  display: inline-block;
+  width: 67px;
+  height: 28px;
+  margin: 35px 0 0 12px;
+
+  content: "";
+
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-size: cover;
+}
+
+.programs__title {
+  color: $black;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__link {
+  color: $black;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.programs__link::after {
+  display: inline-block;
+  width: 24px;
+  height: 12px;
+  margin-left: 15px;
+
+  content: "";
+
+  background-image: url("../../icons/stack.svg#arrow");
+  background-size: cover;
+}
