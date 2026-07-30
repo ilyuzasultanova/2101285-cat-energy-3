@@ -4,3 +4,21 @@
   font-size: 36px;
   line-height: 36px;
 }
+
+.page-main__programs {
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+  }
+}
+
+.page-main__plan {
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+  }
+}

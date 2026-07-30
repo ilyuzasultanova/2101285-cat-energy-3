@@ -1,73 +1,68 @@
+.plan {
+  padding: 10px 0;
+}
+
 .plan__title {
+  margin: 0 0 30px;
   color: $black;
   font-family: $secondary-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 35px 0 70px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .plan__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px 133px;
+    margin-bottom: 50px;
+  }
+}
+
+.plan__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 250px;
+    min-height: 227px;
+  }
 }
 
 .plan__item--leaf::before {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+  @include plan("leaf", 25px 28px);
+}
 
-  content: "";
+.plan__item-description {
+  width: 200px;
 
-  background-color: $accent-color;
-  background-image: url("../../icons/stack.svg#leaf");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25px 28px;
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .plan__item--powder::before {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-
-  content: "";
-
-  background-color: $accent-color;
-  background-image: url("../../icons/stack.svg#powder");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 26px 29px;
+  @include plan("powder", 26px 29px);
 }
 
 .plan__item--diet::before {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-
-  content: "";
-
-  background-color: $accent-color;
-  background-image: url("../../icons/stack.svg#diet");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25px 30px;
+  @include plan("diet", 25px 30px);
 }
 
 .plan__item--clock::before {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-
-  content: "";
-
-  background-color: $accent-color;
-  background-image: url("../../icons/stack.svg#clock");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 26px 31px;
+  @include plan("clock", 26px 31px);
 }
