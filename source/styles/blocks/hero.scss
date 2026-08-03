@@ -1,66 +1,117 @@
 .hero {
   position: relative;
+
   padding-bottom: 10px;
+
   font-family: $secondary-font;
+
   background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, transparent 302px), url("../../images/hero-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
+
+    background-image: none;
   }
 
-  @media (min-width: $tablet-width) and (max-width: #{$desktop-width - 1px}) {
-    background-image: none;
+  @media (min-width: $desktop-width) {
+    min-height: 580px;
+  }
+}
+
+.hero__container {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
   }
 }
 
 .hero__title {
-  margin: 0 0 25px;
-  padding: 27px;
-  color: $white;
-  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 27px;
+
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
+  color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    margin: 65px 0 40px 90px;
     width: 530px;
+    margin-top: 65px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+    padding-top: 0;
+
     font-size: 60px;
     line-height: 60px;
+    color: $black;
   }
 
-  @media (min-width: $tablet-width) and (max-width: #{$desktop-width - 1px}) {
-    color: $black;
+  @media (min-width: $desktop-width) {
+    margin-top: 110px;
+    margin-left: 80px;
   }
 }
 
 .hero__slogan {
-  margin: 0 0 29px;
-  color: $white;
+  margin-top: 0;
+  margin-bottom: 29px;
+
   line-height: 14px;
   text-transform: uppercase;
+  color: $white;
 
   @media (min-width: $tablet-width) {
     width: 530px;
+    margin-bottom: 21px;
+    margin-left: 90px;
+
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 21px 90px;
+    color: $black;
   }
 
-  @media (min-width: $tablet-width) and (max-width: #{$desktop-width - 1px}) {
-    color: $black;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+    margin-left: 80px;
   }
 }
 
-.hero__button {
+.hero__image {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 331px;
+    bottom: 52px;
+  }
+}
+
+.hero__button.button {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 295px;
+    bottom: 526px;
     left: 140px;
+
     min-width: 244px;
     min-height: 54px;
+    padding: 14px;
     box-sizing: border-box;
+
+    font-size: 20px;
+    line-height: 26px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+
+    margin-left: 80px;
   }
 }

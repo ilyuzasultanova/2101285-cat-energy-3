@@ -9,23 +9,26 @@
 
 .navigation__list {
   @include reset-list;
+
   font-size: 20px;
   line-height: 20px;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     display: flex;
     gap: 15px;
+
     font-size: 18px;
     line-height: 24px;
   }
 }
 
 .navigation__item {
-  padding-top: 22px;
   min-height: 66px;
+  padding-top: 22px;
   box-sizing: border-box;
+
   border-bottom: 1px solid $nav-grey;
 
   @media (min-width: $tablet-width) {
@@ -42,6 +45,6 @@
 }
 
 .navigation__link {
-  color: $black;
   text-decoration: none;
+  color: $black;
 }

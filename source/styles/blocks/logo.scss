@@ -6,8 +6,8 @@
 .logo__wrapper {
   display: flex;
   align-items: center;
+
   min-height: 65px;
-  width: 280px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
