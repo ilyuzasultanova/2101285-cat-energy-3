@@ -1,57 +1,29 @@
-.plan {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .plan__title {
-  margin-top: 0;
-  margin-bottom: 30px;
-
+  color: $black;
   font-family: $secondary-font;
   font-size: 36px;
   line-height: 40px;
-  font-weight: 400;
-  color: $black;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 35px;
-    margin-bottom: 70px;
-
-    font-size: 60px;
-    line-height: 60px;
-  }
 }
 
 .plan__list {
-  @include reset-list;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 90px 133px;
-    margin-bottom: 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    gap: 0 73px;
-  }
-}
-
-.plan__item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 250px;
-    min-height: 227px;
-  }
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .plan__item--leaf::before {
-  @include plan("leaf", 25px 28px);
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  content: "";
+
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#leaf");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 28px;
 }
 
 .plan__item--powder::before {
@@ -63,16 +35,16 @@
 }
 
 .plan__item--clock::before {
-  @include plan("clock", 26px 31px);
-}
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
 
-.plan__item-description {
-  width: 200px;
+  content: "";
 
-  @media (min-width: $tablet-width) {
-    width: 250px;
-
-    font-size: 16px;
-    line-height: 24px;
-  }
+  background-color: $accent-color;
+  background-image: url("../../icons/stack.svg#clock");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px 31px;
 }
