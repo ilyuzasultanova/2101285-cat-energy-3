@@ -1,12 +1,38 @@
 .page-footer {
-  background-color: $bg-grey;
+  padding: 40px 0;
+
+  background-color: $bg-grey-basic;
+}
+
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.page-footer__logo-image {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 410px;
+  }
 }
 
 .page-footer__developer-link {
   display: flex;
   justify-content: space-between;
-  color: inherit;
+  align-items: center;
+
   text-decoration: none;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .page-footer__developer-name {

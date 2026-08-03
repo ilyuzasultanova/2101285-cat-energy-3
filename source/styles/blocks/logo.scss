@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    margin: 0;
+  }
+}
+
+.logo__image {
+  margin-right: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
+}

@@ -1,5 +1,14 @@
 .products {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    gap: 141px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 144px 80px;
+  }
 }
