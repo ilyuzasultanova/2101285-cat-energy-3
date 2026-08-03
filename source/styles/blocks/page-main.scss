@@ -1,24 +1,24 @@
+.page-main {
+  padding-top: 10px;
+}
+
 .page-main__title {
+  margin-top: 17px;
+  margin-bottom: 31px;
+
   font-family: $secondary-font;
-  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-}
-
-.page-main__programs {
-  margin: 0 auto;
-  width: 280px;
+  font-weight: 400;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
+    margin-top: 55px;
+    margin-bottom: 155px;
+    font-size: 60px;
+    line-height: 60px;
   }
-}
 
-.page-main__plan {
-  margin: 0 auto;
-  width: 280px;
-
-  @media (min-width: $tablet-width) {
-    width: 708px;
+  @media (min-width: $desktop-width) {
+    margin-top: 64px;
   }
 }
