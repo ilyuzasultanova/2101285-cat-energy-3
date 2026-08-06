@@ -1,18 +1,21 @@
 .products-table__product {
   display: grid;
   grid-template-columns: 200px 70px;
-  grid-template-rows: 26px 24px 40px;
+  grid-template-rows: repeat(3, min-content);
   gap: 10px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 350px 190px 70px;
-    grid-template-rows: 30px 40px;
+    grid-template-rows: repeat(2, min-content);
+    margin-bottom: 54px;
+    padding-inline: 38px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 360px 190px 70px 244px;
-    grid-template-rows: 40px;
+    grid-template-rows: min-content;
+    margin-bottom: 32px;
   }
 }
 

@@ -1,11 +1,21 @@
-/* .navigation {
-  @media (max-width: #{$tablet-width - 1px}) {
+.navigation--open {
+  @media (max-width: $mobile-width-only) {
     position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 1;
+
     width: 100%;
+
     background-color: $white;
   }
 }
-  */
+
+.navigation--closed {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
 
 .navigation__list {
   @include reset-list;

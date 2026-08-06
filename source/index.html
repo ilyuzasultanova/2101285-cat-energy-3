@@ -16,20 +16,18 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container container">
-      <div class="logo__wrapper">
-        <a class="page-header__logo logo" href="#">
-          <picture>
-            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-            <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
-          </picture>
-          <img class="logo__image" src="images/logo-cat-energy.svg" width="101" height="18" alt="Cat energy">
-        </a>
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-      <nav class="page-header__navigation navigation">
+      <a class="page-header__logo logo" href="#">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
+        </picture>
+        <img class="logo__image" src="images/logo-cat-energy.svg" width="101" height="18" alt="Cat energy">
+      </a>
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="page-header__navigation navigation navigation--nojs">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--current" href="#">Главная</a>
@@ -92,16 +90,16 @@
     <section class="page-main__example example">
       <div class="container">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <div class="example__wrapper">
           <dl class="example__list">
             <div class="example__list-item">
               <dt class="example__item-number">5 кг</dt>
-              <dd class="example__item-description">снижение веса</dd>
+              <dd class="example__item-description">снижение <br>веса</dd>
             </div>
             <div class="example__list-item">
               <dt class="example__item-number">60 дней</dt>
-              <dd class="example__item-description example__item-description--width">затрачено времени</dd>
+              <dd class="example__item-description example__item-description--wide">затрачено времени</dd>
             </div>
           </dl>
           <div class="example__price-wrapper">
@@ -169,6 +167,7 @@
       </a>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
