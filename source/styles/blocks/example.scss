@@ -56,7 +56,7 @@
     justify-content: space-between;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 35px;
@@ -68,6 +68,10 @@
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 43px;
+  }
 }
 
 .example__list-item {
@@ -79,6 +83,7 @@
 .example__item-number {
   width: 124px;
   min-height: 56px;
+  box-sizing: border-box;
 
   font-family: $secondary-font;
   font-size: 24px;
@@ -86,8 +91,13 @@
   text-transform: uppercase;
   color: $black;
 
+  border: 1px solid $border-grey;
+  border-radius: 3px;
+
   @media (min-width: $tablet-width) {
     width: 162px;
+    min-height: 72px;
+    padding-top: 15px;
 
     font-size: 30px;
     line-height: 37px;
@@ -96,21 +106,30 @@
 
 .example__item-description {
   width: 87px;
+  margin-top: -9px;
   margin-bottom: 20px;
   margin-left: 0;
 
   font-size: 12px;
   line-height: 12px;
 
+  background-color: $bg-grey-extra;
+
   @media (min-width: $tablet-width) {
     width: 114px;
 
     font-size: 14px;
     line-height: 14px;
+
+    background-color: $white;
+
+    br {
+      display: none;
+    }
   }
 }
 
-.example__item-description--width {
+.example__item-description--wide {
   @media (min-width: $tablet-width) {
     width: 142px;
   }
@@ -122,6 +141,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    gap: 9px;
     text-align: right;
   }
 

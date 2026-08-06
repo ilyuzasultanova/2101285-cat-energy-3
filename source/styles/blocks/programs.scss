@@ -20,9 +20,6 @@
 .programs__item {
   position: relative;
 
-  display: grid;
-  grid-template-columns: 70px 170px;
-  row-gap: 29px;
   min-height: 266px;
   padding: 20px;
   box-sizing: border-box;
@@ -128,9 +125,7 @@
 }
 
 .programs__title {
-  grid-column: 2 / -1;
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin: 10px 0 29px 70px;
 
   font-family: $secondary-font;
   font-size: 24px;
@@ -140,25 +135,37 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
+    margin: 25px 0 24px;
+
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 25px 0 73px 162px;
   }
 }
 
 .programs__description {
-  grid-column: 1 / -1;
   width: 230px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
+    width: 344px;
+    margin-bottom: 48px;
+
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 465px;
+    margin-bottom: 23px;
   }
 }
 
 .programs__link {
-  grid-column: 1 / -1;
-
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
@@ -182,4 +189,12 @@
 
   background-image: url("../../icons/stack.svg#arrow");
   background-size: cover;
+
+  transition: transform 0.3s linear;
+  transform-origin: left center;
 }
+
+.programs__link:is(:hover, :active, :focus-visible)::after {
+  transform: scaleX(1.33);
+}
+

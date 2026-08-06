@@ -25,6 +25,12 @@
 .plan__list {
   @include reset-list;
 
+  counter-reset: plan 0;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 39px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -38,9 +44,21 @@
 }
 
 .plan__item {
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: 20px;
+
+  counter-increment: plan 1;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
+
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -68,11 +86,31 @@
 
 .plan__item-description {
   width: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
+    z-index: 1;
+
     width: 250px;
 
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.plan__item::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -40px;
+    right: 0;
+
+    content: counter(plan);
+
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    text-align: center;
+    color: $bg-grey-basic;
   }
 }
