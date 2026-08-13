@@ -1,10 +1,19 @@
 .example {
-  padding: 10px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
   background-image: linear-gradient(to top, $bg-grey-extra 100%);
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to top, $bg-grey-extra 462px, transparent 462px);
+  }
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 440px 220px 560px;
+    grid-template-rows: repeat(3, min-content);
   }
 }
 
@@ -26,7 +35,9 @@
     line-height: 60px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
     margin-bottom: 146px;
   }
 }
@@ -43,7 +54,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 450px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     margin-bottom: 69px;
   }
 }
@@ -54,9 +66,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 99px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 35px;
@@ -127,6 +142,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-grey-extra;
+  }
 }
 
 .example__item-description--wide {
@@ -162,51 +181,14 @@
   }
 }
 
-.example__slider-button {
-  position: relative;
+.example__slider {
+  @media (min-width: $tablet-width) {
+    margin-inline: auto;
+  }
 
-  display: block;
-  width: 4px;
-  height: 256px;
-  margin-left: 20px;
-  padding: 0;
-
-  background-color: $icons-grey;
-  border: none;
-  border-radius: 2px;
-
-  cursor: pointer;
-}
-
-.example__slider-button::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: block;
-  width: 40px;
-  height: 40px;
-
-  content: "";
-
-  background-color: $white;
-  border: 2px solid $icons-grey;
-  border-radius: 50%;
-}
-
-.example__slider-button::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: block;
-  width: 24px;
-  height: 18px;
-
-  content: "";
-
-  mask-image: url("../../icons/stack.svg#slider-arrow");
-  background-color: $icons-grey;
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+    margin: 0;
+  }
 }

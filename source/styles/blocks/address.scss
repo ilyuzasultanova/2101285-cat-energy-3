@@ -1,7 +1,7 @@
 .address {
   position: relative;
 
-  padding-top: 10px;
+  padding-top: 26px;
 }
 
 .address--with-background {
@@ -19,6 +19,7 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    z-index: 2;
 
     width: 565px;
     min-height: 199px;
@@ -87,4 +88,66 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
   }
+}
+
+.address__map-wrapper {
+  position: relative;
+  height: 362px;
+
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.address__map-wrapper::after {
+  position: absolute;
+  top: 139px;
+  left: 134px;
+
+  display: block;
+  width: 57px;
+  height: 53px;
+
+  content: "";
+
+  background-image: image-set(url("../../images/map-pin-mobile@1x.png") 1x, url("../../images/map-pin-mobile@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 57px 53px;
+
+  @media (min-width: $tablet-width) {
+    top: 146px;
+    left: 333px;
+
+    width: 113px;
+    height: 106px;
+
+    background-image: image-set(url("../../images/map-pin-tablet@1x.png") 1x, url("../../images/map-pin-tablet@2x.png") 2x);
+    background-size: 113px 106px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 131px;
+    left: 908px;
+  }
+}
+
+.address__map {
+  position: absolute;
+  z-index: 1;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.address__fallback {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
 }
