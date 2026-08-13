@@ -5,14 +5,17 @@
 }
 
 .page-footer__container {
+  @media (max-width: $mobile-width-only) {
+    text-align: center;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
   }
 }
 
-.page-footer__logo-image {
-  margin: 0 auto;
-
+.page-footer__logo {
   @media (min-width: $tablet-width) {
     margin-right: 160px;
   }

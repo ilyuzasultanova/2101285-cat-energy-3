@@ -1,0 +1,108 @@
+.slider {
+  position: relative;
+
+  width: 280px;
+  height: 256px;
+
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 50%;
+
+  overflow: hidden;
+}
+
+.slider__after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  width: 100%;
+}
+
+.slider__image {
+  display: block;
+  height: 100%;
+
+  background-image: linear-gradient(to top, $bg-grey-extra 100%);
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to top, $bg-grey-extra 361px, $white 361px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to top, $bg-grey-extra 377px, $white 377px);
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  display: block;
+  width: 4px;
+  height: 100%;
+  padding: 0;
+
+  background-color: $icons-grey;
+  border: none;
+  border-radius: 2px;
+
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+
+  cursor: pointer;
+}
+
+.slider__button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+
+  content: "";
+
+  background-color: $white;
+  border: 2px solid $icons-grey;
+  border-radius: 50%;
+
+  transition: border-color 0.2s ease;
+}
+
+.slider__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 24px;
+  height: 18px;
+
+  content: "";
+
+  background-color: $icons-grey;
+  mask-image: url("../../icons/stack.svg#slider-arrow");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+
+  transition: background-color 0.2s ease;
+}
