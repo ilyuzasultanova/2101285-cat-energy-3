@@ -12,3 +12,19 @@
     gap: 144px 80px;
   }
 }
+
+.products__item {
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    &:first-child::before {
+      @include line($catalog-grey);
+      top: 0;
+    }
+
+    &::after {
+      @include line($catalog-grey);
+      bottom: 0;
+    }
+  }
+}

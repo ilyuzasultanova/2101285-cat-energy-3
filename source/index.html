@@ -116,13 +116,17 @@
         <div class="example__slider slider">
           <div class="slider__before">
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/before-tablet@1x.png 1x, images/before-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="images/before-tablet@1x.webp 1x, images/before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+              <source srcset="images/before-mobile@1x.webp 1x, images/before-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/before-tablet@1x.png 1x, images/before-tablet@2x.png 2x" width="560" height="512" type="image/png">
               <img class="slider__image" src="images/before-mobile@1x.png" srcset="images/before-mobile@2x.png 2x" width="280" height="256" alt="Борис до похудения">
             </picture>
           </div>
           <div class="slider__after">
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/after-tablet@1x.png 1x, images/after-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="images/after-tablet@1x.webp 1x, images/after-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+              <source srcset="images/after-mobile@1x.webp 1x, images/after-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/after-tablet@1x.png 1x, images/after-tablet@2x.png 2x" width="560" height="512" type="image/png">
               <img class="slider__image" src="images/after-mobile@1x.png" srcset="images/after-mobile@2x.png 2x" width="280" height="256" alt="Борис после похудения">
             </picture>
           </div>
@@ -144,9 +148,12 @@
       <div class="address__map-wrapper">
         <iframe class="address__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a8fadb8cfbf8ff9bb6a417afe565c8a1e04361615ae46b48b94c8a59de31a7b&amp;source=constructor" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Наше расположение на карте"></iframe>
         <picture>
-          <source width="70" height="59" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png">
-          <source width="60" height="50" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png">
-          <img class="address__fallback" src="images/map-mobile@1x.png" width="320" height="362" alt="Наше расположение на карте">
+          <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
+          <source media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
+          <source srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="362" type="image/webp">
+          <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400" type="image/png">
+          <source media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400" type="image/png">
+          <img class="address__fallback" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Наше расположение на карте">
         </picture>
       </div>
     </section>

@@ -113,29 +113,38 @@
 }
 
 .product-card__feature-name {
-  width: 65px;
+  width: 70px;
+  padding-right: 5px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 120px;
+    width: 125px;
+
+    border-bottom: 1px solid $border-grey;
   }
 
   @media (min-width: $desktop-width) {
-    width: 80px;
+    width: 85px;
   }
 }
 
 .product-card__feature-description {
-  width: 65px;
+  width: 70px;
   margin-left: 0;
+  padding-left: 5px;
+  box-sizing: border-box;
 
   text-align: right;
 
   @media (min-width: $tablet-width) {
-    width: 120px;
+    width: 125px;
+
+    border-bottom: 1px solid $border-grey;
   }
 
   @media (min-width: $desktop-width) {
-    width: 80px;
+    width: 84px;
+    padding-left: 4px;
   }
 }
 

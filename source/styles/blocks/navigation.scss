@@ -49,10 +49,22 @@
 }
 
 .navigation__item {
+  position: relative;
+
   @media (max-width: $mobile-width-only) {
-    min-height: 66px;
     padding-top: 22px;
+    padding-bottom: 23px;
     box-sizing: border-box;
+
+    &:first-child::before {
+      @include line($nav-grey);
+      top: 0;
+    }
+
+    &::after {
+      @include line($nav-grey);
+      bottom: 0;
+    }
   }
 }
 

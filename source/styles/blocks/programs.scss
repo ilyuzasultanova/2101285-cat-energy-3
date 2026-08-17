@@ -4,6 +4,12 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -149,7 +155,21 @@
 .programs__description {
   width: 230px;
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 0;
+
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      display: block;
+      width: 240px;
+      height: 1px;
+      margin-top: 23px;
+      margin-bottom: 15px;
+
+      content: "";
+
+      background-color: $line-grey;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 344px;
