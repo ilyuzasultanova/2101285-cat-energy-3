@@ -75,10 +75,11 @@
 
   content: "";
 
-  background-image: url("../../icons/stack.svg##{$id}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: $bg-size;
+  background-color: $icons-grey;
+  mask-image: url("../../icons/stack.svg##{$id}");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: $bg-size;
 }
 
 @mixin line($bg-color) {
@@ -96,11 +97,12 @@
 
 @mixin accent-line {
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 50%;
+  left: calc(-1 * (100vw - 100%) / 2);
+  transform: translateY(-2px);
   z-index: -2;
 
-  width: 100%;
+  width: 100vw;
   height: 2px;
 
   content: "";
@@ -110,8 +112,8 @@
 
 @mixin accent-line-divider {
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 0;
+  left: calc(-1 * (100vw - 100%) / 2);
   z-index: -1;
 
   height: 30px;

@@ -3,12 +3,13 @@
   padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
+    margin-top: -2px;
     padding-top: 0;
     padding-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 40px;
+    padding-top: 80px;
     padding-bottom: 40px;
   }
 }
@@ -20,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 20px;
   }
 }
 
@@ -44,6 +46,10 @@
 
 .programs__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
@@ -163,7 +169,7 @@
       width: 240px;
       height: 1px;
       margin-top: 23px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
 
       content: "";
 
@@ -173,7 +179,7 @@
 
   @media (min-width: $tablet-width) {
     width: 344px;
-    margin-bottom: 48px;
+    margin-bottom: 57px;
 
     font-size: 16px;
     line-height: 24px;
@@ -181,7 +187,7 @@
 
   @media (min-width: $desktop-width) {
     width: 465px;
-    margin-bottom: 23px;
+    margin-bottom: 31px;
   }
 }
 
@@ -196,6 +202,10 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -212,9 +222,13 @@
 
   transition: transform 0.3s linear;
   transform-origin: left center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 26px;
+    transform: translateY(-2px);
+  }
 }
 
 .programs__link:is(:hover, :active, :focus-visible)::after {
   transform: scaleX(1.33);
 }
-

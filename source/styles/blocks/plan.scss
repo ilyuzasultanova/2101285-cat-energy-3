@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 25px;
-    padding-bottom: 47px;
+    padding-bottom: 60px;
 
     &::after {
       @include line($nav-grey);
@@ -16,6 +16,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 31px;
+    padding-bottom: 47px;
 
     &::after {
       display: none;
@@ -25,7 +26,7 @@
 
 .plan__title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 39px;
 
   font-family: $secondary-font;
   font-size: 36px;
@@ -34,11 +35,14 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
-    margin-top: 35px;
-    margin-bottom: 70px;
+    margin-bottom: 71px;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
   }
 }
 
@@ -54,7 +58,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 0 73px;
+    gap: 20px 73px;
   }
 }
 
@@ -79,6 +83,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
+    gap: 31px;
     align-items: flex-start;
     width: 250px;
     min-height: 227px;
@@ -130,4 +135,8 @@
     text-align: center;
     color: $bg-grey-basic;
   }
+}
+
+.plan__item--leaf::after {
+  right: 28px;
 }

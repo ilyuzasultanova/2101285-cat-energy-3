@@ -59,20 +59,23 @@
 }
 
 .page-header__logo {
-  margin-bottom: 14px;
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 12px;
+  }
 }
 
 .page-header__toggle {
   @media (max-width: $mobile-width-only) {
     position: absolute;
     top: 12px;
-    right: 13px;
+    right: 11px;
 
     display: block;
 
     width: 40px;
     height: 40px;
     padding: 8px;
+    box-sizing: border-box;
 
     background-color: $white;
     background-image: url("../../icons/stack.svg#menu");
@@ -92,7 +95,9 @@
 }
 
 .page-header__toggle:has(+ .navigation--closed) {
-  display: block;
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 }
 
 .page-header__toggle:has(+ .navigation--open) {
