@@ -6,10 +6,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 11px;
 
   @media (max-width: $mobile-width-only) {
-    min-height: 62px;
+    min-height: 63px;
   }
 }
 
@@ -40,6 +40,21 @@
     content: "";
 
     background-color: $line-grey;
+  }
+}
+
+.socials__link {
+  &:hover::before {
+    background-color: $accent-color;
+  }
+
+  &:active::before {
+    background-color: $accent-color;
+    opacity: 0.3;
+  }
+
+  &:focus-visible::before {
+    background-color: $accent-color;
   }
 }
 

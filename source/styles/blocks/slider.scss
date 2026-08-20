@@ -36,12 +36,14 @@
 
   background-image: linear-gradient(to top, $bg-grey-extra 100%);
 
+  object-fit: contain;
+
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to top, $bg-grey-extra 361px, $white 361px);
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, $bg-grey-extra 377px, $white 377px);
+    background-image: linear-gradient(to top, $bg-grey-extra 376px, $white 376px);
   }
 }
 
@@ -64,6 +66,43 @@
   transition: background-color 0.2s ease, opacity 0.2s ease;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+
+    &::before {
+      border-color: $accent-color;
+    }
+
+    &::after {
+      background-color: $accent-color;
+    }
+  }
+
+  &:active {
+    background-color: $accent-color-extra;
+    opacity: 0.6;
+
+    &::before {
+      border-color: $accent-color-extra;
+    }
+
+    &::after {
+      background-color: $accent-color-extra;
+    }
+  }
+
+  &:focus-visible {
+    background-color: $accent-color;
+
+    &::before {
+      border-color: $accent-color;
+    }
+
+    &::after {
+      background-color: $accent-color;
+    }
+  }
 }
 
 .slider__button::before {

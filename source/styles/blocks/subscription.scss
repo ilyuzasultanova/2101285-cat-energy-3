@@ -1,33 +1,23 @@
 .subscription {
-  position: relative;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
   font-family: $secondary-font;
-}
-
-.subscription::before {
-  @include accent-line;
-}
-
-.subscription::after {
-  @include accent-line-divider;
-  right: calc((100vw - 280px) / 2 + 88px);
 
   @media (min-width: $tablet-width) {
-    left: calc((100vw - 708px) / 2);
-    right: calc((100vw - 708px) / 2 + 426px);
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    left: calc((100vw - 1220px) / 2 - 40px);
-    right: calc((100vw - 1220px) / 2 + 927px);
+    padding-top: 44px;
+    padding-bottom: 104px;
   }
 }
 
 .subscription__title {
-  align-self: flex-start;
+  position: relative;
+
   margin-top: 0;
   margin-bottom: 32px;
   box-sizing: border-box;
@@ -38,6 +28,7 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
     padding-left: 40px;
 
     font-size: 32px;
@@ -45,6 +36,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
     padding-left: 0;
 
     font-size: 40px;
@@ -52,13 +44,28 @@
   }
 }
 
+.subscription__title::before {
+  @include accent-line;
+}
+
+.subscription__title::after {
+  @include accent-line-divider;
+  right: 88px;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+    right: 426px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -40px;
+    right: 927px;
+  }
+}
+
 .subscription__container {
   display: flex;
   flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    align-items: center;
-  }
 }
 
 .subscription__description {
@@ -71,6 +78,7 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
+    align-self: center;
     max-width: 630px;
 
     font-size: 24px;
@@ -84,6 +92,7 @@
 
 .subscription__form {
   @media (min-width: $tablet-width) {
+    align-self: center;
     display: flex;
     align-items: flex-start;
   }
